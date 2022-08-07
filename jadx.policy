@@ -1,0 +1,61 @@
+grant {
+    permission "java.io.FilePermission" "/usr/share/java", "read";
+    permission "java.io.FilePermission" "/usr/share/java/-", "read";
+    permission "java.io.FilePermission" "/usr/lib/jvm", "read";
+    permission "java.io.FilePermission" "/usr/lib/jvm/-", "read";
+    permission "java.io.FilePermission" "${user.home}/.cache/JNA/temp", "read,write,delete";
+    permission "java.io.FilePermission" "${user.home}/.cache/JNA/temp/-", "read,write,delete,execute";
+
+    permission "java.io.FilePermission" "/tmp", "read";
+    permission "java.io.FilePermission" "/tmp/-", "read,write,delete,execute";
+
+    permission "java.io.FilePermission" "${user.home}", "read";
+    // permission "java.io.FilePermission" "${user.home}/-", "read";
+    permission "java.io.FilePermission" "${user.home}/.java", "read";
+    permission "java.io.FilePermission" "${user.home}/.java/-", "read,write,delete";
+    permission "java.io.FilePermission" "${user.home}/Desktop", "read";
+    permission "java.io.FilePermission" "${user.home}/Desktop/-", "read,write,delete";
+
+    permission "java.io.FilePermission" "/opt", "read";
+    permission "java.io.FilePermission" "/opt/jadx", "read";
+    permission "java.io.FilePermission" "/opt/jadx/-", "read";
+
+    permission "java.util.PropertyPermission" "slf4j.detectLoggerNameMismatch", "read";
+    permission "java.util.PropertyPermission" "user.home", "read";
+    permission "java.util.PropertyPermission" "logback.statusListenerClass", "read";
+    permission "java.util.PropertyPermission" "logback.ignoreTCL", "read";
+    permission "java.util.PropertyPermission" "logback.configurationFile", "read";
+    permission "java.util.PropertyPermission" "logback.debug", "read";
+    permission "java.util.PropertyPermission" "logback.ContextSelector", "read";
+    permission "java.util.PropertyPermission" "TokenMakerFactory", "read";
+    permission "java.util.PropertyPermission" "jcommander.debug", "read";
+    permission "java.util.PropertyPermission" "flatlaf.animatedLafChange", "read";
+    permission "java.util.PropertyPermission" "rx2.buffer-size", "read";
+    permission "java.util.PropertyPermission" "rx2.scheduler.use-nanotime", "read";
+    permission "java.util.PropertyPermission" "rx2.scheduler.drift-tolerance", "read";
+    permission "java.util.PropertyPermission" "*", "read";
+
+    permission "java.lang.RuntimePermission" "preferences";
+    permission "java.lang.RuntimePermission" "getClassLoader";
+    permission "java.lang.RuntimePermission" "setDefaultUncaughtExceptionHandler";
+    permission "java.lang.RuntimePermission" "modifyThread";
+    permission "java.lang.RuntimePermission" "modifyThreadGroup";
+    permission "java.lang.RuntimePermission" "getenv.*";
+    permission "java.lang.RuntimePermission" "accessDeclaredMembers";
+
+    permission "java.lang.reflect.ReflectPermission" "suppressAccessChecks";
+
+    permission "java.lang.management.ManagementPermission" "monitor";
+
+    permission "java.net.URLPermission" "https://api.github.com/repos/skylot/jadx/releases/latest", "GET:";
+    permission "java.net.SocketPermission" "api.github.com:443", "connect,resolve";
+
+    permission "java.awt.AWTPermission" "showWindowWithoutWarningBanner";
+    permission "java.awt.AWTPermission" "listenToAllAWTEvents";
+    permission "java.awt.AWTPermission" "fullScreenExclusive";
+    permission "java.awt.AWTPermission" "accessClipboard";
+    permission "java.awt.AWTPermission" "watchMousePointer";
+    permission "java.awt.AWTPermission" "setWindowAlwaysOnTop";
+
+
+};
