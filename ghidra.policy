@@ -1,0 +1,64 @@
+grant {
+    permission "java.io.FilePermission" "/usr/share/java", "read";
+    permission "java.io.FilePermission" "/usr/share/java/-", "read";
+    permission "java.io.FilePermission" "/usr/lib/jvm", "read";
+    permission "java.io.FilePermission" "/usr/lib/jvm/-", "read";
+    permission "java.io.FilePermission" "${user.home}/.cache/JNA/temp", "read,write,delete";
+    permission "java.io.FilePermission" "${user.home}/.cache/JNA/temp/-", "read,write,delete,execute";
+
+    permission "java.io.FilePermission" "/tmp", "read";
+    permission "java.io.FilePermission" "/tmp/-", "read,write,delete,execute";
+
+    permission "java.io.FilePermission" "/", "read";
+
+    permission "java.io.FilePermission" "${user.home}", "read";
+    // permission "java.io.FilePermission" "${user.home}/-", "read";
+    permission "java.io.FilePermission" "${user.home}/.java", "read";
+    permission "java.io.FilePermission" "${user.home}/.java/-", "read,write,delete";
+    permission "java.io.FilePermission" "${user.home}/.JavaHelp", "read";
+    permission "java.io.FilePermission" "${user.home}/.JavaHelp/-", "read";
+    permission "java.io.FilePermission" "${user.home}/ghidra_scripts", "read";
+    permission "java.io.FilePermission" "${user.home}/ghidra_scripts/-", "read";
+
+    permission "java.io.FilePermission" "/opt", "read";
+    permission "java.io.FilePermission" "/opt/ghidra", "read";
+    permission "java.io.FilePermission" "/opt/ghidra/-", "read,write,delete,execute";
+
+    permission "java.io.FilePermission" "${user.home}/.ghidra", "read,write,delete";
+    permission "java.io.FilePermission" "${user.home}/.ghidra/-", "read,write,delete,execute";
+
+    permission "java.io.FilePermission" "${user.home}/Desktop", "read";
+    permission "java.io.FilePermission" "${user.home}/Desktop/-", "read,write,delete";
+
+    permission "javax.management.MBeanPermission" "-#-[-]", "queryNames";
+    permission "javax.management.MBeanPermission" "*", "registerMBean";
+    permission "javax.management.MBeanPermission" "*", "unregisterMBean";
+    permission "javax.management.MBeanPermission" "*", "queryNames";
+
+    permission "javax.management.MBeanServerPermission" "*";
+
+    permission "java.lang.management.ManagementPermission" "monitor";
+
+    permission "javax.management.MBeanTrustPermission" "register";
+
+    permission "java.lang.reflect.ReflectPermission" "suppressAccessChecks";
+    permission "java.lang.reflect.ReflectPermission" "newProxyInPackage.*";
+
+    permission "java.util.PropertyPermission" "*", "read,write";
+
+    permission "java.lang.RuntimePermission" "shutdownHooks";
+    permission "java.lang.RuntimePermission" "getenv.JETTY_AVAILABLE_PROCESSORS";
+    permission "java.lang.RuntimePermission" "setContextClassLoader";
+    permission "java.lang.RuntimePermission" "modifyThread";
+    permission "java.lang.RuntimePermission" "getenv.JETTY_WORKER_INSTANCE";
+    permission "java.lang.RuntimePermission" "loadLibrary.*";
+    permission "java.lang.RuntimePermission" "*";
+
+    permission "java.awt.AWTPermission" "*";
+
+    permission "java.net.NetPermission" "specifyStreamHandler";
+
+    permission "org.osgi.framework.AdminPermission" "*";
+
+
+};

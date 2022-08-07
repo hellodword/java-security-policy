@@ -13,12 +13,13 @@ grant {
     // permission "java.io.FilePermission" "${user.home}/-", "read";
     permission "java.io.FilePermission" "${user.home}/.java", "read";
     permission "java.io.FilePermission" "${user.home}/.java/-", "read,write,delete";
-    permission "java.io.FilePermission" "${user.home}/Desktop", "read";
-    permission "java.io.FilePermission" "${user.home}/Desktop/-", "read,write,delete";
 
     permission "java.io.FilePermission" "/opt", "read";
     permission "java.io.FilePermission" "/opt/jadx", "read";
     permission "java.io.FilePermission" "/opt/jadx/-", "read";
+
+    permission "java.io.FilePermission" "${user.home}/Desktop", "read";
+    permission "java.io.FilePermission" "${user.home}/Desktop/-", "read,write,delete";
 
     permission "java.util.PropertyPermission" "slf4j.detectLoggerNameMismatch", "read";
     permission "java.util.PropertyPermission" "user.home", "read";
